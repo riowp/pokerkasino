@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="GoldBtn" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">4dp</item>
+        <item name="android:background">@drawable/btn_gold</item>
+        <item name="android:textColor">@color/chip_black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingVertical">12dp</item>
+    </style>
+
+    <style name="DarkBtn" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">4dp</item>
+        <item name="android:background">@drawable/btn_dark</item>
+        <item name="android:textColor">@color/gold</item>
+        <item name="android:paddingVertical">12dp</item>
+    </style>
+
+    <style name="ChipBtn" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginHorizontal">3dp</item>
+        <item name="android:background">@drawable/btn_dark</item>
+        <item name="android:textColor">@color/gold</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingHorizontal">2dp</item>
+    </style>
+    <style name="ReelStyle">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_marginHorizontal">6dp</item>
+        <item name="android:background">@drawable/bg_reel</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">44sp</item>
+    </style>
+    <style name="DiceStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginHorizontal">8dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">64sp</item>
+    </style>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Casino Klasik</string>
+    <string name="tagline">Kasino klasik offline &#8226; chip virtual</string>
+    <string name="balance_label">Saldo Chip</string>
+    <string name="daily_bonus">Bonus Harian</string>
+    <string name="reset_chips">Reset Chip</string>
+
+    <string name="game_blackjack">Blackjack</string>
+    <string name="game_roulette">Roulette</string>
+    <string name="game_slot">Slot Machine</string>
+    <string name="game_dice">Dadu (Sic Bo)</string>
+    <string name="game_poker">Texas Hold\'em</string>
+    <string name="game_domino">Domino (Gaple)</string>
+    <string name="game_chess">Catur</string>
+
+    <string name="desc_blackjack">Kalahkan bandar, dekati 21</string>
+    <string name="desc_roulette">Putar roda, tebak angka</string>
+    <string name="desc_slot">Tarik tuas, cocokkan simbol</string>
+    <string name="desc_dice">Tebak Besar / Kecil</string>
+    <string name="desc_poker">Lawan 2 bot, gertak &amp; menang</string>
+    <string name="desc_domino">Gaple 4 pemain, habiskan kartu</string>
+    <string name="desc_chess">Lawan bot + saran langkah</string>
+</resources>

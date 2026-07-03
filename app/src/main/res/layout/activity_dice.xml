@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_table"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/game_dice"
+                android:textColor="@color/gold"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\uD83E\uDE99 "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/gold"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Dadu -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_felt"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="24dp">
+
+            <TextView android:id="@+id/dice1" style="@style/DiceStyle" android:text="\u2680" />
+            <TextView android:id="@+id/dice2" style="@style/DiceStyle" android:text="\u2681" />
+            <TextView android:id="@+id/dice3" style="@style/DiceStyle" android:text="\u2682" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Pilih taruhan lalu lempar"
+            android:textColor="@color/gold"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Taruhan Besar/Kecil -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Besar / Kecil (1:1, kalah jika triple)"
+            android:textColor="@color/cream"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/betSmall" style="@style/DarkBtn" android:layout_width="0dp" android:layout_weight="1" android:text="KECIL 4-10" />
+            <Button android:id="@+id/betBig" style="@style/DarkBtn" android:layout_width="0dp" android:layout_weight="1" android:text="BESAR 11-17" />
+        </LinearLayout>
+
+        <!-- Taruhan angka -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Angka Tunggal (bayar per dadu yang cocok)"
+            android:textColor="@color/cream"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/num1" style="@style/ChipBtn" android:text="1" />
+            <Button android:id="@+id/num2" style="@style/ChipBtn" android:text="2" />
+            <Button android:id="@+id/num3" style="@style/ChipBtn" android:text="3" />
+            <Button android:id="@+id/num4" style="@style/ChipBtn" android:text="4" />
+            <Button android:id="@+id/num5" style="@style/ChipBtn" android:text="5" />
+            <Button android:id="@+id/num6" style="@style/ChipBtn" android:text="6" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtSelectedBet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Taruhan: - "
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- Chip -->
+        <TextView
+            android:id="@+id/txtBet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Chip taruhan (% dari total chip)"
+            android:textColor="@color/gold"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.rio.casinoklasik.ui.BetSliderView
+            android:id="@+id/sliderBet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" />
+
+        <Button
+            android:id="@+id/btnRoll"
+            style="@style/GoldBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="LEMPAR DADU" />
+    </LinearLayout>
+</ScrollView>

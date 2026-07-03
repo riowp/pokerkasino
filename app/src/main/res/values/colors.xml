@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="felt_green">#0B6E4F</color>
+    <color name="felt_green_dark">#08543C</color>
+    <color name="table_bg">#0A3B2E</color>
+    <color name="gold">#F2C94C</color>
+    <color name="gold_dark">#C9A227</color>
+    <color name="chip_red">#D32F2F</color>
+    <color name="chip_blue">#1565C0</color>
+    <color name="chip_black">#212121</color>
+    <color name="white">#FFFFFF</color>
+    <color name="cream">#FFF8E1</color>
+    <color name="win_green">#2E7D32</color>
+    <color name="lose_red">#B71C1C</color>
+    <color name="card_surface">#0F4A38</color>
+</resources>

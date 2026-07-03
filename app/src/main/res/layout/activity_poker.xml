@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_table"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/game_poker"
+                android:textColor="@color/gold"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\uD83E\uDE99 "
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/gold"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- ===== Panel Setup ===== -->
+        <LinearLayout
+            android:id="@+id/setupPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_felt"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Level Bot"
+                android:textColor="@color/gold"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btnEasy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_diff_normal"
+                    android:gravity="center"
+                    android:paddingVertical="12dp"
+                    android:text="Easy"
+                    android:textColor="@color/cream"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btnMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_diff_normal"
+                    android:gravity="center"
+                    android:paddingVertical="12dp"
+                    android:text="Medium"
+                    android:textColor="@color/cream"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btnHard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_diff_normal"
+                    android:gravity="center"
+                    android:paddingVertical="12dp"
+                    android:text="Hard"
+                    android:textColor="@color/cream"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Blind besar"
+                android:textColor="@color/gold"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <com.rio.casinoklasik.ui.BetSliderView
+                android:id="@+id/sliderBlind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/txtBuyin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Buy-in: 0"
+                android:textColor="@color/cream"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnSit"
+                style="@style/GoldBtn"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="Duduk &amp; Mulai" />
+        </LinearLayout>
+
+        <!-- ===== Panel Meja ===== -->
+        <LinearLayout
+            android:id="@+id/tablePanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <com.rio.casinoklasik.ui.SeatView
+                    android:id="@+id/seatB1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.rio.casinoklasik.ui.SeatView
+                    android:id="@+id/seatB2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <com.rio.casinoklasik.ui.SeatView
+                    android:id="@+id/seatB3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.rio.casinoklasik.ui.SeatView
+                    android:id="@+id/seatB4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/gold_dark" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Kartu Meja"
+                android:textColor="@color/gold"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/communityCards"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="90dp"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/txtPot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Pot: 0"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/gold_dark" />
+
+            <TextView
+                android:id="@+id/txtYouInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Anda"
+                android:textColor="@color/gold"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/playerCards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:minHeight="90dp"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/txtHandName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/cream"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:minHeight="42dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- Aksi -->
+            <LinearLayout
+                android:id="@+id/actionPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btnFold"
+                    style="@style/DarkBtn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Fold" />
+
+                <Button
+                    android:id="@+id/btnCall"
+                    style="@style/GoldBtn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Check" />
+
+                <Button
+                    android:id="@+id/btnRaise"
+                    style="@style/GoldBtn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Raise" />
+
+                <Button
+                    android:id="@+id/btnAllIn"
+                    style="@style/DarkBtn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="All-in" />
+            </LinearLayout>
+
+            <!-- Panel Raise -->
+            <LinearLayout
+                android:id="@+id/raisePanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.rio.casinoklasik.ui.BetSliderView
+                    android:id="@+id/sliderRaise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnCancelRaise"
+                        style="@style/DarkBtn"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Batal" />
+
+                    <Button
+                        android:id="@+id/btnConfirmRaise"
+                        style="@style/GoldBtn"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Naikkan" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnNextHand"
+                style="@style/GoldBtn"
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:text="Hand Berikutnya"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnLeave"
+                style="@style/DarkBtn"
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:text="Keluar Meja (cash out)" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

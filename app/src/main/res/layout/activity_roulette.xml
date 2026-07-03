@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_table"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/game_roulette"
+                android:textColor="@color/gold"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\uD83E\uDE99 "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/gold"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Display hasil -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_felt"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <com.rio.casinoklasik.ui.RouletteWheelView
+                android:id="@+id/wheel"
+                android:layout_width="290dp"
+                android:layout_height="290dp" />
+
+            <TextView
+                android:id="@+id/txtMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Pilih taruhan lalu putar"
+                android:textColor="@color/gold"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Taruhan luar -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Taruhan Luar (1:1 &amp; 2:1)"
+            android:textColor="@color/cream"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/betRed" style="@style/DarkBtn" android:layout_width="0dp" android:layout_weight="1" android:text="MERAH" />
+            <Button android:id="@+id/betBlack" style="@style/DarkBtn" android:layout_width="0dp" android:layout_weight="1" android:text="HITAM" />
+            <Button android:id="@+id/betOdd" style="@style/DarkBtn" android:layout_width="0dp" android:layout_weight="1" android:text="GANJIL" />
+            <Button android:id="@+id/betEven" style="@style/DarkBtn" android:layout_width="0dp" android:layout_weight="1" android:text="GENAP" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button android:id="@+id/betLow" style="@style/DarkBtn" android:layout_width="0dp" android:layout_weight="1" android:text="1-18" />
+            <Button android:id="@+id/betHigh" style="@style/DarkBtn" android:layout_width="0dp" android:layout_weight="1" android:text="19-36" />
+            <Button android:id="@+id/betD1" style="@style/DarkBtn" android:layout_width="0dp" android:layout_weight="1" android:text="1st12" />
+            <Button android:id="@+id/betD2" style="@style/DarkBtn" android:layout_width="0dp" android:layout_weight="1" android:text="2nd12" />
+            <Button android:id="@+id/betD3" style="@style/DarkBtn" android:layout_width="0dp" android:layout_weight="1" android:text="3rd12" />
+        </LinearLayout>
+
+        <!-- Taruhan angka -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Angka Tunggal 0-36 (35:1)"
+            android:textColor="@color/cream"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/inputNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_balance"
+                android:hint="0-36"
+                android:inputType="number"
+                android:maxLength="2"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="#88FFF8E1" />
+
+            <Button
+                android:id="@+id/betNumber"
+                style="@style/DarkBtn"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="PILIH ANGKA" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtSelectedBet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Taruhan: - "
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- Chip taruhan -->
+        <TextView
+            android:id="@+id/txtBet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Chip taruhan (% dari total chip)"
+            android:textColor="@color/gold"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.rio.casinoklasik.ui.BetSliderView
+            android:id="@+id/sliderBet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" />
+
+        <Button
+            android:id="@+id/btnSpin"
+            style="@style/GoldBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="PUTAR" />
+    </LinearLayout>
+</ScrollView>
